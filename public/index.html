@@ -16,8 +16,9 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
 
-    <body ng-app="egswiss_tournament">
-        <div id="content" ng-controller="MainController">
+    <body ng-app="egswiss_tournament" ng-controller="MainController">
+        <div id="content">
+            <button>Create Tournament</button>
             <div ng-repeat="tournament in tournaments">
                 <tournament-field tournament="tournament">
                 </tournament-field>
@@ -32,15 +33,17 @@
             <script src="./lib/Bootstrap/js/bootstrap.min.js"></script>
             <script src="./lib/Toastr/toastr.js"></script>
 
-            <!-- Anuglar Files -->
+            <!-- Angular Files -->
             <script src="./js/app.js"></script>
             <script src="./js/config.js"></script>
 
             <!-- Module Files -->
             <script src="./js/Direktives/directive.js"></script>
+            <script src="./js/Controller/controller.js"></script>
 
             <!-- Angular Component Files -->
             <script src="./js/Direktives/tournamentFieldDirective/tournamentFieldDirective.js"></script>
+            <script src="./js/Controller/controller.js"></script>
         </div>
     </body>
 </html>

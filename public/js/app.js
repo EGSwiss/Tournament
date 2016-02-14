@@ -1,7 +1,7 @@
 /**
  * Created by Michael on 13.02.2016.
  */
-var module = angular.module('egswiss_tournament', ["directives"]);
+var module = angular.module('egswiss_tournament', ["directives", "controllers"]);
 
 module.controller('MainController', function ($scope) {
     $scope.tournaments = [
@@ -20,6 +20,7 @@ module.controller('MainController', function ($scope) {
             tournamenttype: "team",
             randomAllocation: false,            /*false: custom allocation by organisator*/
             price: "NO PRICE IN THIS TEST",
+            editable: false,
             participants: [
                 {
                     id: 1,
@@ -53,7 +54,10 @@ module.controller('MainController', function ($scope) {
         },
         {
             id: 2,
-            organisator: $scope.allParticipant[1],
+            organisator: {
+                name: "Google",
+                id: 10
+            },
             creationDate: "04.02.2016",
             date: "24.03.2016",
             game: "League of Legends",
@@ -63,6 +67,7 @@ module.controller('MainController', function ($scope) {
             tournamenttype: "single",
             randomAllocation: true,             /*false: custom allocation by organisator*/
             price: "NO PRICE IN THIS TEST",
+            editable: false,
             participants: [
                 {
                     id: 5,
