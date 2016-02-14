@@ -33,10 +33,47 @@ module.controller('MainController', function ($scope) {
 
     $scope.tournaments = [
         {
-            name: 1
-        },
-        {
-            name: 2
+            id: 1,
+            organisator: $scope.allParticipant[0],
+            creationDate: "02.02.2016",
+            date: "20.03.2016",
+            game: "League of Legends",
+            title: "Das erste grosse LOL Turnier auf EGSwiss!!!",
+            description: "Ein kleines erstes LOL Turnier auf EGSwiss. Alle Sind herzlich eingeladen mitzuspielen!",
+            participantCount: 4,                /*anzahl teilnehmer*/
+            tournamenttype: "team",
+            randomAllocation: false,            /*false: custom allocation by organisator*/
+            price: "NO PRICE IN THIS TEST",
+            participants: [
+                {
+                    id: 1,
+                    name: "EGS",
+                    members: [
+                        {
+                            id: 1,
+                            name: "John"
+                        },
+                        {
+                            id: 2,
+                            name: "Peter"
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "TGW",
+                    members: [
+                        {
+                            id: 3,
+                            name: "Trish"
+                        },
+                        {
+                            id: 4,
+                            name: "hensi"
+                        }
+                    ]
+                }
+            ]
         }
     ];
 
