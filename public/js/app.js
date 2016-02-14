@@ -50,6 +50,29 @@ module.controller('MainController', function ($scope) {
                     ]
                 }
             ]
+        },
+        {
+            id: 2,
+            organisator: $scope.allParticipant[1],
+            creationDate: "04.02.2016",
+            date: "24.03.2016",
+            game: "League of Legends",
+            title: "Das erste kleine tournier (1 vs 1) !!!",
+            description: "1 vs 1 LOL. join us!",
+            participantCount: 2,                /*anzahl teilnehmer*/
+            tournamenttype: "single",
+            randomAllocation: true,             /*false: custom allocation by organisator*/
+            price: "NO PRICE IN THIS TEST",
+            participants: [
+                {
+                    id: 5,
+                    name: "Fabiennaa"
+                },
+                {
+                    id: 6,
+                    name: "blublu"
+                }
+            ]
         }
     ];
 
