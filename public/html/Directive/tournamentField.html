@@ -1,14 +1,14 @@
 <div>
     <h1>{{tournament.title}}</h1>
-    <div ng-repeat="team in allTeams" ng-if="{{tournament.tournamenttype}} != 'team'">
-        <p>{{team.name}}</p>
-    </div>
-    <!--<div ng-repeat="participant in allParticipant" ng-if="tournament.tournamenttype === 'team'">
-        <p>{{participant.name}}</p>
-    </div>
-    -->
+    <div ng-repeat="team in allTeams" ng-if="$scope.tournament.tournamenttype != 'team'">
+        <div class="factionLeft">
 
-    <div ng-if="{{tournament.editable}} == 'false'">
-        {{tournament.title}}
+        </div>
+        <div class="factionRight">
+
+        </div>
+    </div>
+    <div ng-repeat="participant in allParticipant" ng-if="$scope.tournament.tournamenttype != 'single'">
+        <p>{{participant.name}}</p>
     </div>
 </div>

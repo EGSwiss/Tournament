@@ -55,8 +55,8 @@ module.controller('MainController', function ($scope) {
         {
             id: 2,
             organisator: {
-                name: "Google",
-                id: 10
+                id: 10,
+                name: "Google"
             },
             creationDate: "04.02.2016",
             date: "24.03.2016",
