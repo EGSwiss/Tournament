@@ -5,10 +5,20 @@ module.directive('tournamentField', function () {
         restrict: 'E',
         templateUrl: './html/Directive/tournamentField.html',
         scope: {
-            ngRepeat: '='
+            tournament: '='
         },
         controller: function ($scope) {
-            console.dir($scope);
+            $scope.allTeams = [];
+            $scope.allParticipant = [];
+            if ($scope.tournament.tournamenttype === 'team') {
+                _.each($scope.tournament.participants, function (team) {
+                    $scope.allTeams.push(team);
+                });
+            } else {
+                _.each($scope.tournament.participants, function (participant) {
+                    $scope.allParticipant.push(participant);
+                });
+            }
         }
     }
 });

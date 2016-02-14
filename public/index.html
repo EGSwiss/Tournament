@@ -19,7 +19,7 @@
     <body ng-app="egswiss_tournament">
         <div id="content" ng-controller="MainController">
             <div ng-repeat="tournament in tournaments">
-                <tournament-field>
+                <tournament-field tournament="tournament">
                 </tournament-field>
             </div>
         </div>

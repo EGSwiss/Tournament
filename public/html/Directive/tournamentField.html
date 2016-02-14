@@ -1,1 +1,10 @@
-<h1>Hello World</h1>
+<div>
+    <h1>{{tournament.title}}</h1>
+    <div ng-repeat="team in allTeams" ng-if="{{tournament.tournamenttype}} != 'team'">
+        <p>{{team.name}}</p>
+    </div>
+    <!--<div ng-repeat="participant in allParticipant" ng-if="tournament.tournamenttype === 'team'">
+        <p>{{participant.name}}</p>
+    </div>
+    -->
+</div>

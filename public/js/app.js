@@ -4,37 +4,13 @@
 var module = angular.module('egswiss_tournament', ["directives"]);
 
 module.controller('MainController', function ($scope) {
-    $scope.allParticipant  = [
-        {
-            name: "Jonney",
-            id: 1
-        },
-        {
-            name: "Jessica",
-            id: 2
-        },
-        {
-            name: "MrCannonball",
-            id: 3
-        },
-        {
-            name: "Googletester",
-            id: 4
-        },
-        {
-            name: "Someday12",
-            id: 5
-        },
-        {
-            name: "ggfdgdfg",
-            id: 6
-        }
-    ];
-
     $scope.tournaments = [
         {
             id: 1,
-            organisator: $scope.allParticipant[0],
+            organisator: {
+                name: "Jonney",
+                id: 16
+            },
             creationDate: "02.02.2016",
             date: "20.03.2016",
             game: "League of Legends",
