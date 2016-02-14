@@ -53,7 +53,10 @@ module.controller('MainController', function ($scope) {
         },
         {
             id: 2,
-            organisator: $scope.allParticipant[1],
+            organisator: {
+                id: 10,
+                name: "Google"
+            },
             creationDate: "04.02.2016",
             date: "24.03.2016",
             game: "League of Legends",
