@@ -7,4 +7,8 @@
         <p>{{participant.name}}</p>
     </div>
     -->
+
+    <div ng-if="{{tournament.editable}} == 'false'">
+        {{tournament.title}}
+    </div>
 </div>
