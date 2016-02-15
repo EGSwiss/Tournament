@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>EGSwiss - Tuniere</title>
+<head>
+    <title>EGSwiss - Tuniere</title>
 
-        <meta charset="utf-8">
+    <meta charset="utf-8">
 
-        <meta name="description" content="EGSwiss tournament is a application where you configure own tournaments. From gamers for gamers." />
-        <meta name="keywords" content="swiss, switzerland, schweiz, gaming, games, deutsch, community, group, game, teamspeak, team, tournament, tunier" />
-        <meta name="author" content="EGSwiss">
-        <meta name="robots" content="index, follow">
-        <meta name="revisit-after" content="7 days">
+    <meta name="description" content="EGSwiss tournament is a application where you configure own tournaments. From gamers for gamers." />
+    <meta name="keywords" content="swiss, switzerland, schweiz, gaming, games, deutsch, community, group, game, teamspeak, team, tournament, tunier" />
+    <meta name="author" content="EGSwiss">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
 
-        <link rel="stylesheet" type="text/css" href="./lib/Bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="./lib/Toastr/toastr.css">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-    </head>
+    <link rel="stylesheet" type="text/css" href="./lib/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/Toastr/toastr.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
 
-    <body ng-app="egswiss_tournament" ng-controller="MainController">
-        <div id="content">
-            <button>Create Tournament</button>
-            <div ng-repeat="tournament in tournaments">
-                <tournament-field tournament="tournament">
-                </tournament-field>
+<body ng-app="egswiss_tournament" ng-controller="MainController">
+
+    <div id="topHeader">
+        <a href="http://forum.egswiss.ch">Anmelden</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="headerLogo">
+                <img src="images/egsLogo.png">
             </div>
         </div>
-        <div id="scripts">
-            <!-- Libraries -->
-            <script src="./lib/jQuery/jquery-1.11.3.min.js"></script>
-            <script src="./lib/Angularjs/angular/angular.min.js"></script>
-            <script src="./lib/Angularjs/route/angular-route.min.js"></script>
-            <script src="./lib/Underscore/underscore.js"></script>
-            <script src="./lib/Bootstrap/js/bootstrap.min.js"></script>
-            <script src="./lib/Toastr/toastr.js"></script>
 
-            <!-- Angular Files -->
-            <script src="./js/app.js"></script>
-            <script src="./js/config.js"></script>
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Tournaments</a></li>
+            </ul>
+        </nav>
 
-            <!-- Module Files -->
-            <script src="./js/Direktives/directive.js"></script>
-            <script src="./js/Controller/controller.js"></script>
+        <div id="content" ng-controller="createTournament">
 
-            <!-- Angular Component Files -->
-            <script src="./js/Direktives/tournamentFieldDirective/tournamentFieldDirective.js"></script>
-            <script src="./js/Controller/controller.js"></script>
+            <button ng-click="createTournament()">Create Tournament</button>
+            <createTournament></createTournament>
+            <div id="tournaments" ng-repeat="tournament in tournaments">
+                <tournament-field tournament="tournament"></tournament-field>
+            </div>
         </div>
-    </body>
+    </div>
+
+
+
+    <div id="scripts">
+        <!-- Libraries -->
+        <script src="./lib/jQuery/jquery-1.11.3.min.js"></script>
+        <script src="./lib/Angularjs/angular/angular.min.js"></script>
+        <script src="./lib/Angularjs/route/angular-route.min.js"></script>
+        <script src="./lib/Underscore/underscore.js"></script>
+        <script src="./lib/Bootstrap/js/bootstrap.min.js"></script>
+        <script src="./lib/Toastr/toastr.js"></script>
+
+        <!-- Angular Files -->
+        <script src="./js/app.js"></script>
+        <script src="./js/config.js"></script>
+
+        <!-- Module Files -->
+        <script src="./js/Direktives/directive.js"></script>
+        <script src="./js/Controller/controller.js"></script>
+
+        <!-- Angular Component Files -->
+        <script src="./js/Direktives/tournamentFieldDirective/tournamentFieldDirective.js"></script>
+        <script src="./js/Controller/tournamentFieldController/tournamentFieldController.js"></script>
+        <script src="./js/Controller/createTournamentController/createTournamentController.js"></script>
+        <script src="./js/Direktives/createTournamentDirective/createTournamentDirective.js"></script>
+    </div>
+</body>
 </html>

@@ -1,5 +1,7 @@
-<div>
+<div id="contentofTournaments">
     <h1>{{tournament.title}}</h1>
+    <button ng-click="">Edit</button>
+
     <div ng-repeat="team in allTeams" ng-if="$scope.tournament.tournamenttype != 'team'">
         <div class="factionLeft">
 
@@ -11,4 +13,11 @@
     <div ng-repeat="participant in allParticipant" ng-if="$scope.tournament.tournamenttype != 'single'">
         <p>{{participant.name}}</p>
     </div>
+
+    <div ng-if="tournament.editable == false">
+        Titel: <input ng-model="tournament.title">
+    </div>
+
+
+
 </div>

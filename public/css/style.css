@@ -1,0 +1,73 @@
+/* Custom CSS in here */
+
+@font-face {
+    font-family: 'Questrial';
+    src:
+            local('Questrial');
+url('Questrial-Regular.ttf');
+}
+.navbar-default a {
+    color: #FFFFFF !important;
+}
+
+html, body{ background-color: #F1F1F1; font-family: 'Questrial', sans-serif;}
+
+#contentofTournaments {
+    border:1px solid black;
+    padding:20px;
+    margin:25px 0;
+}
+
+.container { padding-top: 50px; width: 90%; }
+
+.navbar-default {
+    background-image: none;
+    background-color: #2F2F2F;
+    border-radius: none;
+    box-shadow: none;
+}
+.navbar-default .container-fluid {
+    padding-left: 0px;
+}
+.navbar-default a {
+    color: #FFFFFF !important;
+}
+
+/* Content Boxes */
+#topHeader {
+    color: #444444;
+    background-color: #2F2F2F;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+/** Media Queries **/
+@media screen and (min-width: 768px){
+    .navbar-brand { display: none !important; }
+    .header { display: block; }
+    .panelLeft { min-height: 700px; }
+    .panelRightUp { min-height: 100px; }
+    .panelRightDown {  min-height: 580px; }
+}
+
+/* KLEINER ALS 767 dann wird das gemacht:  */
+@media all and (max-width: 767px){
+    #header { margin: 0; }
+    .navbar { margin: 0; }
+    .navbar-default { margin: 0px; }
+    .panelLeft { width: 100%; padding: 0px; margin: 0px; }
+    .container { width: 100%; padding: 0px; }
+    .panelRightUp {
+        margin: 2.5%;
+        float: left;
+        width: 45%;
+    }
+    .panelRightDown {
+        margin: 2.5%;
+        float: left;
+        width: 45%;
+    }
+    .clear {
+        clear: both;
+    }
+}
