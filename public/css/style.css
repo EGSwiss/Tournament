@@ -1,29 +1,45 @@
-/* Custom CSS in here */
+/* Created by Hensi und Timä */
 
+/** Fonts **/
 @font-face {
     font-family: 'Questrial';
-    src:
-            local('Questrial');
-url('Questrial-Regular.ttf');
-}
-.navbar-default a {
-    color: #FFFFFF !important;
+    src: local('Questrial');
+    url('Questrial-Regular.ttf');
 }
 
-html, body{ background-color: #F1F1F1; font-family: 'Questrial', sans-serif;}
+/** Element **/
+html, body {
+    background-color: #F1F1F1;
+    font-family: 'Questrial', sans-serif;
+}
 
+/** IDs **/
 #contentofTournaments {
     border:1px solid black;
     padding:20px;
     margin:25px 0;
 }
 
-.container { padding-top: 50px; width: 90%; }
+#topHeader {
+    color: #444444;
+    background-color: #2F2F2F;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+/** Classes **/
+.navbar-default a {
+    color: #FFFFFF !important;
+}
+
+.container {
+    padding-top: 50px;
+    width: 90%;
+}
 
 .navbar-default {
     background-image: none;
     background-color: #2F2F2F;
-    border-radius: none;
     box-shadow: none;
 }
 .navbar-default .container-fluid {
@@ -33,13 +49,34 @@ html, body{ background-color: #F1F1F1; font-family: 'Questrial', sans-serif;}
     color: #FFFFFF !important;
 }
 
-/* Content Boxes */
-#topHeader {
-    color: #444444;
-    background-color: #2F2F2F;
-    padding: 8px;
-    font-size: 1.2em;
+.factionLeft {
+    float: left;
+    width: 20%;
 }
+
+.factionRight {
+    float: left;
+    width: 20%;
+}
+
+.factionLeft p, .factionRight p {
+    
+}
+
+.tournamentDescription {
+    width: 40%;
+    float: left;
+}
+
+.tournamentField {
+    width: 40%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
 
 /** Media Queries **/
 @media screen and (min-width: 768px){
@@ -50,7 +87,6 @@ html, body{ background-color: #F1F1F1; font-family: 'Questrial', sans-serif;}
     .panelRightDown {  min-height: 580px; }
 }
 
-/* KLEINER ALS 767 dann wird das gemacht:  */
 @media all and (max-width: 767px){
     #header { margin: 0; }
     .navbar { margin: 0; }
