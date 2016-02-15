@@ -1,0 +1,39 @@
+/** Fonts **/
+
+
+/** Element **/
+
+
+/** IDs **/
+
+
+/** Classes **/
+.factionLeft {
+    float: left;
+    width: 20%;
+}
+
+.factionRight {
+    float: left;
+    width: 20%;
+}
+
+.factionLeft p, .factionRight p {
+    
+}
+
+.tournamentDescription {
+    width: 40%;
+    float: left;
+}
+
+.tournamentField {
+    width: 40%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+/** Media Queries **/
