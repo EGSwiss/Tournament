@@ -9,14 +9,14 @@ module.directive('tournamentField', function () {
         },
         controller: function ($scope) {
             $scope.allTeams = [];
-            $scope.allParticipant = [];
+            $scope.allParticipants = [];
             if ($scope.tournament.tournamenttype === 'team') {
                 _.each($scope.tournament.participants, function (team) {
                     $scope.allTeams.push(team);
                 });
             } else {
                 _.each($scope.tournament.participants, function (participant) {
-                    $scope.allParticipant.push(participant);
+                    $scope.allParticipants.push(participant);
                 });
             }
         }

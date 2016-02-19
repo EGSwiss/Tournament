@@ -51,15 +51,23 @@ html, body {
 
 .factionLeft {
     float: left;
-    width: 20%;
+    width: 40%;
 }
 
 .factionRight {
     float: left;
-    width: 20%;
+    width: 40%;
 }
 
 .factionLeft p, .factionRight p {
+    background-color: #adadad;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 7px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .tournamentDescription {

@@ -17,19 +17,13 @@
     <div class="tournamentField">
         <h3>Tunier Übersicht</h3>
         <div ng-repeat="team in allTeams" ng-if="$scope.tournament.tournamenttype != 'team'">
-            <div class="factionLeft">
-                <p ng-if="!(($index + 1) % 2 >= 1)">{{team.name}}</p>
-            </div>
-            <div class="factionRight">
-                <p ng-if="!(($index + 1) % 2 == 0)">{{team.name}}</p>
+            <div class="factionRound1">
+                <p>{{team.name}}</p>
             </div>
         </div>
-        <div ng-repeat="participant in allParticipant" ng-if="$scope.tournament.tournamenttype != 'single'">
-            <div class="factionLeft">
-                <p ng-if="!(($index + 1) % 2 >= 1)">{{participant.name}}</p>
-            </div>
-            <div class="factionRight">
-                <p ng-if="!(($index + 1) % 2 == 0)">{{participant.name}}</p>
+        <div ng-repeat="participant in allParticipants" ng-if="$scope.tournament.tournamenttype != 'single'">
+            <div class="factionRound1">
+                <p>{{participant.name}}</p>
             </div>
         </div>
     </div>
