@@ -37,12 +37,12 @@
         </nav>
 
         <div id="content">
-            <div id="createTournament" ng-controller="createTournament">
-                <create-tournament temp-tournament="tempTournament"></create-tournament>
+            <div id="createTournament" ng-controller="addTournament">
+                <add-tournament tournaments="tournaments" add-tournament="addTournament" state="tournamentState"></add-tournament>
             </div>
 
             <div id="tournaments" ng-repeat="tournament in tournaments">
-                <tournament-field tournament="tournament"></tournament-field>
+                <tournament-field tournament="tournament" state="tournamentState"></tournament-field>
             </div>
         </div>
     </div>
@@ -67,8 +67,8 @@
         <!-- Angular Component Files -->
         <script src="./js/Direktives/tournamentFieldDirective/tournamentFieldDirective.js"></script>
         <script src="./js/Controller/tournamentFieldController/tournamentFieldController.js"></script>
-        <script src="./js/Direktives/createTournamentDirective/createTournamentDirective.js"></script>
-        <script src="./js/Controller/createTournamentController/createTournamentController.js"></script>
+        <script src="js/Direktives/addTournamentDirective/addTournamentDirective.js"></script>
+        <script src="js/Controller/addTournamentController/addTournamentController.js"></script>
     </div>
 </body>
 </html>
