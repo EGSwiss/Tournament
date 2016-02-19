@@ -14,7 +14,7 @@ html, body {
 }
 
 /** IDs **/
-#contentofTournaments {
+#tempTournament {
     border:1px solid black;
     padding:20px;
     margin:25px 0;
@@ -36,7 +36,11 @@ html, body {
     padding-top: 50px;
     width: 90%;
 }
-
+.tournament {
+    border:1px solid black;
+    padding:20px;
+    margin:25px 0;
+}
 .navbar-default {
     background-image: none;
     background-color: #2F2F2F;
@@ -68,6 +72,9 @@ html, body {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+
+.tempTournamentDescription {
 }
 
 .tournamentDescription {

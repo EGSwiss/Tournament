@@ -36,17 +36,16 @@
             </ul>
         </nav>
 
-        <div id="content" ng-controller="createTournament">
+        <div id="content">
+            <div id="createTournament" ng-controller="createTournament">
+                <create-tournament temp-tournament="tempTournament"></create-tournament>
+            </div>
 
-            <button ng-click="createTournament()">Create Tournament</button>
-            <createTournament></createTournament>
             <div id="tournaments" ng-repeat="tournament in tournaments">
                 <tournament-field tournament="tournament"></tournament-field>
             </div>
         </div>
     </div>
-
-
 
     <div id="scripts">
         <!-- Libraries -->
@@ -68,8 +67,8 @@
         <!-- Angular Component Files -->
         <script src="./js/Direktives/tournamentFieldDirective/tournamentFieldDirective.js"></script>
         <script src="./js/Controller/tournamentFieldController/tournamentFieldController.js"></script>
-        <script src="./js/Controller/createTournamentController/createTournamentController.js"></script>
         <script src="./js/Direktives/createTournamentDirective/createTournamentDirective.js"></script>
+        <script src="./js/Controller/createTournamentController/createTournamentController.js"></script>
     </div>
 </body>
 </html>

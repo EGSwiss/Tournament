@@ -1,6 +1,19 @@
-<div ng-if="$scope.isAddable">
+<div>
+    <button ng-click="createTournament()">Create</button>
+</div>
 
-<h1>Create Tournament</h1>
+<div id="tempTournament" ng-show="isVisible" >
 
+    <h1>Create Tournament</h1>
+
+    <div class="tempTournamentDescription form-group">
+       <label>Titel</label>
+        <input ng-model="tempTournament.title">
+
+
+    </div>
+
+    <button ng-click="save()">save Tournament</button>
+    <button ng-click="cancelCreateTournament()">cancel Tournament</button>
 
 </div>
