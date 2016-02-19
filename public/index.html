@@ -38,14 +38,14 @@
 
         <div id="content">
             <div>
-                <div id="createTournament" class="tournament addTournament" ng-controller="createTournament">
-                    <create-tournament temp-tournament="tempTournament"></create-tournament>
+                <div class="tournament addTournament">
+                    <add-tournament add-tournament="addTournament"></add-tournament>
                 </div>
                 <div class="tournament editTournament">
                     <edit-tournament edit-tournament="editTournament"></edit-tournament>
                 </div>
                 <div class="tournament viewTournament">
-                    <view-tournament view-tournament="tournament"></view-tournament>
+                    <view-tournament view-tournament="viewTournament"></view-tournament>
                 </div>
             </div>
         </div>
@@ -69,8 +69,8 @@
         <script src="./js/Controller/controller.js"></script>
 
         <!-- Angular Component Files -->
-        <script src="./js/Direktives/createTournamentDirective/createTournamentDirective.js"></script>
-        <script src="./js/Controller/createTournamentController/createTournamentController.js"></script>
+        <script src="./js/Direktives/addTournamentDirective/addTournamentDirective.js"></script>
+        <script src="./js/Controller/addTournamentController/addTournamentController.js"></script>
 
         <script src="./js/Direktives/editTournamentDirective/editTournamentDirective.js"></script>
         <script src="./js/Controller/editTournamentController/editTournamentController.js"></script>

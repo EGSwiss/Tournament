@@ -1,25 +1,30 @@
 var module = angular.module('directives');
 
-module.directive('createTournament', function () {
+module.directive('addTournament', function () {
     return {
         restrict: 'E',
-        templateUrl: './html/Directive/createTournament.html',
+        templateUrl: './html/Directive/addTournament.html',
         scope: {
-            tempTournament: "="
+            tournaments: "=",
+            addTournament: "=",
+            state: "="
         },
         controller: function ($scope) {
             $scope.isVisible = false;
+
             $scope.createTournament = function () {
-                console.log("create");
                 $scope.isVisible = true;
             };
+
             $scope.cancelCreateTournament = function () {
-                $scope.tempTournament = {};
+                $scope.addTournament = {};
                 $scope.isVisible = false;
             };
 
             $scope.save = function () {
-                console.dir($scope.tempTournament);
+                $scope.addTournament.state = "edit";
+                $scope.tournaments.push($scope.addTournament);
+                $scope.addTournament = {};
             }
         }
     }
