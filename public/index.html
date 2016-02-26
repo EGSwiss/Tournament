@@ -31,12 +31,14 @@
 
         <nav class="navbar navbar-default">
             <ul class="nav navbar-nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Tournaments</a></li>
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="tournament">Tournaments</a></li>
             </ul>
         </nav>
 
         <div id="content">
+            <ui-view></ui-view>
+            <!--
             <div>
                 <div class="tournament addTournament">
                     <add-tournament add-tournament="addTournament"></add-tournament>
@@ -48,6 +50,7 @@
                     <view-tournament view-tournament="viewTournament"></view-tournament>
                 </div>
             </div>
+                -->
         </div>
     </div>
 
@@ -55,7 +58,7 @@
         <!-- Libraries -->
         <script src="./lib/jQuery/jquery-1.11.3.min.js"></script>
         <script src="./lib/Angularjs/angular/angular.min.js"></script>
-        <script src="./lib/Angularjs/route/angular-route.min.js"></script>
+        <script src="./lib/Angularjs/uiRoute/angular-ui-router.js"></script>
         <script src="./lib/Underscore/underscore.js"></script>
         <script src="./lib/Bootstrap/js/bootstrap.min.js"></script>
         <script src="./lib/Toastr/toastr.js"></script>

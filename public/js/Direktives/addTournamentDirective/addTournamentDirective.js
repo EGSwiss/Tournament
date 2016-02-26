@@ -23,6 +23,7 @@ module.directive('addTournament', function () {
 
             $scope.save = function () {
                 $scope.addTournament.state = "edit";
+                console.log($scope.addTournament);
                 $scope.tournaments.push($scope.addTournament);
                 $scope.addTournament = {};
             }

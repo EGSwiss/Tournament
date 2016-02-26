@@ -1,9 +1,25 @@
 /**
  * Created by Michael on 13.02.2016.
  */
-var module = angular.module('egswiss_tournament', ["directives", "controllers"]);
+var module = angular.module('egswiss_tournament', ["ui.router", "directives", "controllers", "config"]);
 
-module.controller('MainController', function ($scope) {
+module.controller('MainController', function ($scope, $state) {
+
+
+    $scope.changeState = function () {
+        $state.go('tournament');
+    };
+
+    $scope.$on("$stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
+        console.log("stateChangeSuccess");
+        console.dir(event);
+        console.dir(toState);
+        console.dir(toParams);
+        console.dir(fromState);
+        console.dir(fromParams);
+    });
+
+
     $scope.tournaments = [
         {
             id: 1,
